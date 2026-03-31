@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Muhammad Ashhad - Web Developer Portfolio</title>
+    <title>Muhammad Ashhad - Web Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,17 +18,15 @@
             line-height: 1.6;
             color: #333;
             background: #f0f2f5;
-            overflow-x: hidden;
         }
 
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
-            backdrop-filter: blur(5px);
         }
 
         nav {
@@ -42,7 +40,6 @@
 
         .logo h2 {
             color: #0077b6;
-            font-size: 1.5rem;
         }
 
         .nav-links {
@@ -58,7 +55,6 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            transition: color 0.3s;
         }
 
         .nav-links a:hover {
@@ -75,7 +71,7 @@
             height: 3px;
             background: #333;
             margin: 5px;
-            transition: all 0.3s;
+            transition: 0.3s;
         }
 
         .hero {
@@ -84,11 +80,10 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            color: #fff;
+            color: white;
             padding: 6rem 1rem 4rem;
         }
 
@@ -106,29 +101,22 @@
             margin-bottom: 1rem;
         }
 
-        .hero-content p {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn {
-            padding: 0.8rem 1.8rem;
+            padding: 0.8rem 2rem;
             text-decoration: none;
             border-radius: 5px;
             font-weight: 500;
-            transition: all 0.3s;
             display: inline-block;
             cursor: pointer;
             border: none;
-            font-family: inherit;
-            font-size: 1rem;
         }
 
         .btn-primary {
@@ -138,70 +126,58 @@
 
         .btn-primary:hover {
             background: #ffc400;
-            transform: translateY(-2px);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
+            color: white;
+            border: 2px solid white;
         }
 
         .btn-secondary:hover {
-            background: #fff;
+            background: white;
             color: #333;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
         }
 
         .section-title {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: #333;
-            position: relative;
         }
 
         .section-title:after {
             content: '';
             display: block;
             width: 60px;
-            height: 4px;
+            height: 3px;
             background: #0077b6;
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
+            margin: 0.5rem auto;
         }
 
         .about {
-            background: #fff;
+            background: white;
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
             align-items: center;
         }
 
-        .about-text p {
-            margin-bottom: 1rem;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
         .about-image img {
-            width: 220px;
-            height: 220px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #0077b6;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .skills {
@@ -210,26 +186,21 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .skill-category {
-            background: #fff;
-            padding: 1.8rem;
-            border-radius: 15px;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .skill-category h3 {
             color: #0077b6;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .skill-category ul {
@@ -237,22 +208,20 @@
         }
 
         .skill-category li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
         .skill-category i {
-            margin-right: 0.8rem;
+            margin-right: 0.5rem;
             color: #0077b6;
-            width: 25px;
         }
 
         .learning {
-            font-size: 0.7rem;
             background: #fff3e0;
             color: #ff9800;
             padding: 0.2rem 0.5rem;
             border-radius: 20px;
-            margin-left: 0.5rem;
+            font-size: 0.7rem;
         }
 
         .experience {
@@ -261,30 +230,25 @@
 
         .experience-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
         .experience-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        .experience-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .exp-header h3 {
+        .experience-card h3 {
             color: #0077b6;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .company {
             font-weight: 600;
-            color: #333;
+            margin-bottom: 0.3rem;
         }
 
         .duration {
@@ -295,172 +259,124 @@
 
         .experience-card ul {
             list-style: none;
-            margin-top: 1rem;
         }
 
         .experience-card li {
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.5rem;
             display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .experience-card li i {
             color: #0077b6;
-            margin-top: 0.2rem;
         }
 
         .contact {
-            background: #fff;
+            background: white;
         }
 
         .contact-content {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
         .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
             background: #f8f9fc;
-            padding: 1.8rem;
-            border-radius: 15px;
+            padding: 2rem;
+            border-radius: 10px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
-            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
 
         .contact-item i {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #0077b6;
-            width: 35px;
-        }
-
-        .contact-item p {
-            word-break: break-all;
+            width: 30px;
         }
 
         .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
             background: #f8f9fc;
-            padding: 1.8rem;
-            border-radius: 15px;
+            padding: 2rem;
+            border-radius: 10px;
         }
 
         .contact-form input,
         .contact-form textarea {
+            width: 100%;
             padding: 0.8rem;
+            margin-bottom: 1rem;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 5px;
             font-family: inherit;
-            font-size: 1rem;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #0077b6;
+        .contact-form button {
+            width: 100%;
         }
 
         footer {
             background: #1a2a3a;
-            color: #fff;
+            color: white;
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .form-message {
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 0.8rem;
+            border-radius: 5px;
             margin-top: 1rem;
-            text-align: center;
             display: none;
-            font-weight: 500;
         }
 
         .form-message.success {
             background: #d4edda;
             color: #155724;
-            border: 1px solid #c3e6cb;
+            display: block;
         }
 
         .form-message.error {
             background: #f8d7da;
             color: #721c24;
-            border: 1px solid #f5c6cb;
+            display: block;
         }
 
-        @media (min-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            .hero-content h2 {
-                font-size: 1.5rem;
-            }
-            .about-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 3rem;
-            }
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .experience-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .contact-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 2rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .experience-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
                 right: -100%;
                 top: 70px;
                 height: calc(100vh - 70px);
-                background: #fff;
+                background: white;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
-                transition: right 0.3s ease-in-out;
+                transition: 0.3s;
             }
             .nav-links.active {
                 right: 0;
             }
             .nav-links li {
-                margin: 1.2rem 0;
+                margin: 1.5rem 0;
             }
             .burger {
                 display: block;
             }
-            .hero {
-                background-attachment: scroll;
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
             }
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
+            .hero-content h1 {
+                font-size: 2rem;
             }
-            .btn {
-                width: 200px;
+            .about-image {
                 text-align: center;
             }
         }
@@ -501,7 +417,7 @@
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Muhammad Ashhad</span></h1>
             <h2>Web Developer | PHP & Laravel Enthusiast</h2>
-            <p>Son of Muhammad Aslam | Currently pursuing 3-year IT Diploma from Aptech</p>
+            <p>Son of Muhammad Aslam | 3-Year IT Diploma from Aptech</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Contact Me</a>
                 <a href="#" class="btn btn-secondary" id="downloadCV">Download CV</a>
@@ -516,11 +432,11 @@
                 <div class="about-text">
                     <p>I am <strong>Muhammad Ashhad</strong>, son of Muhammad Aslam. I have completed my Intermediate in Commerce and am currently pursuing a 3-year IT diploma from Aptech, specializing in Web Development.</p>
                     <p>I have 1+ years of experience in accounts and administration, which has given me strong skills in record-keeping, client coordination, and attention to detail.</p>
-                    <p>Now I am transitioning into web development with skills in Frontend and Backend technologies. I am passionate about building responsive, user-friendly websites and applications.</p>
+                    <p>Now I am transitioning into web development with skills in Frontend and Backend technologies.</p>
                     <p><strong>Currently Learning:</strong> Laravel Framework</p>
                 </div>
                 <div class="about-image">
-                    <img src="WhatsApp Image 2026-03-30 at 3.49.24 PM.jpeg" alt="Profile Picture">
+                    <img src="WhatsApp Image 2026-03-30 at 3.49.24 PM.jpeg" alt="Profile Picture" onerror="this.src='https://via.placeholder.com/250'">
                 </div>
             </div>
         </div>
@@ -531,7 +447,7 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
                     <ul>
                         <li><i class="fab fa-html5"></i> HTML5</li>
                         <li><i class="fab fa-css3-alt"></i> CSS3</li>
@@ -540,7 +456,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3><i class="fas fa-server"></i> Backend</h3>
                     <ul>
                         <li><i class="fab fa-php"></i> PHP</li>
                         <li><i class="fas fa-database"></i> MySQL</li>
@@ -548,12 +464,11 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Other Skills</h3>
+                    <h3><i class="fas fa-briefcase"></i> Other Skills</h3>
                     <ul>
                         <li><i class="fas fa-chart-line"></i> Accounts Management</li>
                         <li><i class="fas fa-tasks"></i> Vendor Coordination</li>
                         <li><i class="fas fa-file-alt"></i> Record Keeping</li>
-                        <li><i class="fas fa-users"></i> Client Management</li>
                     </ul>
                 </div>
             </div>
@@ -565,44 +480,34 @@
             <h2 class="section-title">Work Experience</h2>
             <div class="experience-grid">
                 <div class="experience-card">
-                    <div class="exp-header">
-                        <h3>Accounts & Administration Officer</h3>
-                        <p class="company">Infinity Construction & Engineering</p>
-                        <p class="duration">2025 - Present</p>
-                    </div>
+                    <h3>Accounts & Administration Officer</h3>
+                    <div class="company">Infinity Construction & Engineering</div>
+                    <div class="duration">2025 - Present</div>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> Managed daily payments to vendors, labor, and shops</li>
-                        <li><i class="fas fa-check-circle"></i> Maintained physical and digital vouchers with bill attachments</li>
-                        <li><i class="fas fa-check-circle"></i> Coordinated with Iqra University for bill submissions and payment proof</li>
-                        <li><i class="fas fa-check-circle"></i> Handled office administration, staff attendance, and salaries</li>
-                        <li><i class="fas fa-check-circle"></i> Managed company assets including rider and office equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Managed daily payments to vendors and labor</li>
+                        <li><i class="fas fa-check-circle"></i> Maintained vouchers with bill attachments</li>
+                        <li><i class="fas fa-check-circle"></i> Coordinated with Iqra University</li>
+                        <li><i class="fas fa-check-circle"></i> Handled office administration and salaries</li>
                     </ul>
                 </div>
-
                 <div class="experience-card">
-                    <div class="exp-header">
-                        <h3>Data Entry / Closing Specialist</h3>
-                        <p class="company">Daraz</p>
-                        <p class="duration">3 Months</p>
-                    </div>
+                    <h3>Data Entry Specialist</h3>
+                    <div class="company">Daraz</div>
+                    <div class="duration">3 Months</div>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> Performed closing entries and data management</li>
-                        <li><i class="fas fa-check-circle"></i> Maintained accurate records of transactions</li>
-                        <li><i class="fas fa-check-circle"></i> Handled daily data entry tasks efficiently</li>
+                        <li><i class="fas fa-check-circle"></i> Performed closing entries</li>
+                        <li><i class="fas fa-check-circle"></i> Maintained accurate records</li>
+                        <li><i class="fas fa-check-circle"></i> Daily data entry tasks</li>
                     </ul>
                 </div>
-
                 <div class="experience-card">
-                    <div class="exp-header">
-                        <h3>Web Development Projects</h3>
-                        <p class="company">Freelance / Personal Projects</p>
-                        <p class="duration">2025 - Present</p>
-                    </div>
+                    <h3>Web Development Projects</h3>
+                    <div class="company">Freelance</div>
+                    <div class="duration">2025 - Present</div>
                     <ul>
-                        <li><i class="fas fa-paw"></i> <strong>Patrona Puppy</strong> - Complete website developed for pet-related services</li>
-                        <li><i class="fas fa-cake-candles"></i> <strong>Hotnoven</strong> - Luxury cakes and bakery website developed with modern design</li>
-                        <li><i class="fas fa-code"></i> Built responsive websites using HTML, CSS, JavaScript, Bootstrap, MySQL and PHP</li>
-                        <li><i class="fas fa-mobile-alt"></i> Ensured mobile-responsive design for all projects</li>
+                        <li><i class="fas fa-paw"></i> <strong>Patrona Puppy</strong> - Pet services website</li>
+                        <li><i class="fas fa-cake-candles"></i> <strong>Hotnoven</strong> - Luxury cakes website</li>
+                        <li><i class="fas fa-mobile-alt"></i> Mobile-responsive designs</li>
                     </ul>
                 </div>
             </div>
@@ -630,127 +535,93 @@
                         <i class="fab fa-github"></i>
                         <p>github.com/muhammadashhad</p>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <p>linkedin.com/in/muhammad-ashhad</p>
-                    </div>
                 </div>
-                
-                <form id="web3form" class="contact-form">
+                <form id="contactForm" class="contact-form">
                     <input type="hidden" name="access_key" value="def41f57-4789-41b0-9c12-33ba7293b2cc">
-                    <input type="hidden" name="subject" value="New Message from Portfolio">
-                    <input type="hidden" name="from_name" value="Portfolio Website">
-                    <input type="hidden" name="redirect" value="false">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
-                    <div id="form-message" class="form-message"></div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="formMessage" class="form-message"></div>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Muhammad Ashhad. All rights reserved.</p>
-        </div>
+        <p>&copy; 2026 Muhammad Ashhad. All rights reserved.</p>
     </footer>
 
     <script>
-        // Mobile Menu
+        // Mobile menu toggle
         const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
-        const navItems = document.querySelectorAll('.nav-links a');
-
+        const nav = document.querySelector('.nav-links');
         burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            nav.classList.toggle('active');
             burger.classList.toggle('toggle');
         });
 
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
                 burger.classList.remove('toggle');
             });
         });
 
-        // Smooth Scroll
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
         // Download CV
-        const downloadBtn = document.getElementById('downloadCV');
-        if (downloadBtn) {
-            downloadBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const cvContent = `MUHAMMAD ASHHAD\nWeb Developer | PHP & Laravel Enthusiast\nSon of Muhammad Aslam\n\nCONTACT\nEmail: ashhadaslam.728@gmail.com\nPhone: 03272762043, 03299278137\n\nEDUCATION\n- 3-Year IT Diploma | Aptech (Ongoing)\n- Intermediate in Commerce\n\nSKILLS\n- Frontend: HTML, CSS, JavaScript, Bootstrap\n- Backend: PHP, MySQL, Laravel (Learning)\n- Accounts & Administration\n\nEXPERIENCE\n- Accounts & Administration Officer | Infinity Construction\n- Data Entry Specialist | Daraz\n- Web Projects: Patrona Puppy, Hotnoven`;
-                const blob = new Blob([cvContent], { type: 'text/plain' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Muhammad_Ashhad_CV.txt';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            });
-        }
+        document.getElementById('downloadCV').addEventListener('click', (e) => {
+            e.preventDefault();
+            const cv = `Muhammad Ashhad\nWeb Developer\n\nContact: ashhadaslam.728@gmail.com\nPhone: 0327 2762043, 0329 9278137\n\nSkills: HTML, CSS, JS, PHP, MySQL, Laravel\n\nExperience: Infinity Construction, Daraz\n\nProjects: Patrona Puppy, Hotnoven`;
+            const blob = new Blob([cv], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Muhammad_Ashhad_CV.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
 
-        // Web3Forms - Send email with alert
-        const form = document.getElementById('web3form');
-        const messageDiv = document.getElementById('form-message');
-        const submitBtn = document.getElementById('submitBtn');
+        // Contact form
+        const form = document.getElementById('contactForm');
+        const msgDiv = document.getElementById('formMessage');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = '⏳ Sending...';
-            submitBtn.disabled = true;
-            
+            const btn = form.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
             const formData = new FormData(form);
-            
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    messageDiv.textContent = '✅ Message sent successfully! I will get back to you soon.';
-                    messageDiv.className = 'form-message success';
-                    messageDiv.style.display = 'block';
-                    form.reset();
-                    
-                    // Auto hide after 5 seconds
-                    setTimeout(() => {
-                        messageDiv.style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error('Failed to send');
-                }
-            } catch (error) {
-                messageDiv.textContent = '❌ Failed to send message. Please email me directly at ashhadaslam.728@gmail.com';
-                messageDiv.className = 'form-message error';
-                messageDiv.style.display = 'block';
-                
-                setTimeout(() => {
-                    messageDiv.style.display = 'none';
-                }, 5000);
-            } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+
+            if(data.success) {
+                msgDiv.textContent = '✅ Message sent! I will reply soon.';
+                msgDiv.className = 'form-message success';
+                form.reset();
+            } else {
+                msgDiv.textContent = '❌ Failed. Email me directly at ashhadaslam.728@gmail.com';
+                msgDiv.className = 'form-message error';
             }
+            btn.textContent = originalText;
+            btn.disabled = false;
+            setTimeout(() => {
+                msgDiv.style.display = 'none';
+                msgDiv.className = 'form-message';
+            }, 5000);
         });
     </script>
 </body>
