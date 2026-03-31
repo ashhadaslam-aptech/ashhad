@@ -383,6 +383,7 @@
             margin-top: 1rem;
             text-align: center;
             display: none;
+            font-weight: 500;
         }
 
         .form-message.success {
@@ -639,10 +640,11 @@
                     <input type="hidden" name="access_key" value="def41f57-4789-41b0-9c12-33ba7293b2cc">
                     <input type="hidden" name="subject" value="New Message from Portfolio">
                     <input type="hidden" name="from_name" value="Portfolio Website">
+                    <input type="hidden" name="redirect" value="false">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
                     <div id="form-message" class="form-message"></div>
                 </form>
             </div>
@@ -702,16 +704,16 @@
             });
         }
 
-        // Web3Forms - Send email
+        // Web3Forms - Send email with alert
         const form = document.getElementById('web3form');
         const messageDiv = document.getElementById('form-message');
+        const submitBtn = document.getElementById('submitBtn');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = '⏳ Sending...';
             submitBtn.disabled = true;
             
             const formData = new FormData(form);
@@ -729,16 +731,19 @@
                     messageDiv.className = 'form-message success';
                     messageDiv.style.display = 'block';
                     form.reset();
+                    
+                    // Auto hide after 5 seconds
                     setTimeout(() => {
                         messageDiv.style.display = 'none';
                     }, 5000);
                 } else {
-                    throw new Error('Something went wrong');
+                    throw new Error('Failed to send');
                 }
             } catch (error) {
-                messageDiv.textContent = '❌ Failed to send message. Please try again or email me directly.';
+                messageDiv.textContent = '❌ Failed to send message. Please email me directly at ashhadaslam.728@gmail.com';
                 messageDiv.className = 'form-message error';
                 messageDiv.style.display = 'block';
+                
                 setTimeout(() => {
                     messageDiv.style.display = 'none';
                 }, 5000);
